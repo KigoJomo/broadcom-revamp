@@ -4,22 +4,80 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --deep-blue: #3d3b8eff;
+  --soft-blue: #6883baff;
+  --light-gray: #f9f9f9ff;
+  --rose-pink: #e072a4ff;
+  --mint-green: #b0e298ff;
+  --font-size: 1rem;
+  --font-ratio: 1.618;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (max-width: 768px) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --font-ratio: 1.35;
   }
 }
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+}
+
+h1 {
+  font-size: calc(var(--font-size) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio));
+  font-weight: 600;
+}
+
+h2 {
+  font-size: calc(var(--font-size) * var(--font-ratio) * var(--font-ratio));
+  font-weight: 600;
+}
+
+h3 {
+  font-size: calc(var(--font-size) * var(--font-ratio));
+  font-weight: 600;
+}
+
+p {
+  font-size: calc(var(--font-size) * 1);
+  opacity: 0.8;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.bg-deep-blue {
+  color: var(--background);
+}
+
+.bg-background {
+  color: var(--foreground);
+}
+
+.bg-transparent {
+  color: var(--background);
+}
+
+html body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+html body section {
+  flex-shrink: 0;
+  padding: 1rem 4rem;
 }

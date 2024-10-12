@@ -1,0 +1,54 @@
+"use client"
+
+import Link from 'next/link'
+import React, {useState} from 'react'
+import { RiMenu3Fill } from 'react-icons/ri'
+import { MdChevronRight } from 'react-icons/md'
+import { IoMdClose } from "react-icons/io";
+
+const pages = [
+  { name: 'home', href: '/' },
+  { name: 'products & services', href: '/products' },
+  { name: 'solutions', href: '/solutions' },
+  { name: 'about us', href: '/about' },
+  { name: 'contact us', href: '/contact' },
+]
+
+const Header = () => {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <header className="w-full h-[10vh] sticky z-10 top-0 flex-shrink-0 px-8 flex items-center justify-between    bg-deep-blue">
+      <Link href="/" className="logo">
+        <h3>logo</h3>
+      </Link>
+
+      <nav className={`absolute top-0 ${open ? 'left-0' : '-left-full'} transition-all duration-300 z-10 md:static h-screen md:h-fit w-[75vw]  md:w-fit py-6 px-8 md:p-0 flex flex-col md:flex-row md:items-center md:gap-12 bg-background md:bg-transparent shadow-2xl md:shadow-none`}>
+        <div className="w-full flex items-center justify-between md:hidden logo mb-8">
+          <h3>logo</h3>
+          <button className='close-menu' onClick={() => setOpen(false)}>
+            <IoMdClose size={24} />
+          </button>
+        </div>
+
+        {pages.map((page, index) => (
+          <div
+            key={index}
+            className="flex items-center justify-between w-full md:w-fit border-b md:border-0 border-black border-opacity-25 py-4 md:py-0 hover:pl-8 md:hover:pl-0 transition-all duration-300" onClick={() => setOpen(false)}
+          >
+            <Link href={page.href} className="capitalize md:uppercase text-foreground md:text-background">
+              {page.name}
+            </Link>
+            <MdChevronRight className="md:hidden" size={24} />
+          </div>
+        ))}
+      </nav>
+
+      <button className="menu-button flex md:hidden" onClick={() => setOpen(true)}>
+        <RiMenu3Fill size={32} />
+      </button>
+    </header>
+  )
+}
+
+export default Header
