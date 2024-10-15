@@ -1,15 +1,13 @@
 import Image from 'next/image'
-import Landing from './components/Home/Landing'
+import Landing from './components/Landing'
+import Carousel from './components/Home/Carousel'
 
 export default function Home() {
   return (
     <>
-      <Landing
-        heading={'broadband communication network'}
-        paragraph={
-          "We're a communication technologies        solution provider, utilizing advanced technologies to serve large business organizations in Africa."
-        }
-      />
+      <Landing className={'gap-0 p-6'}>
+        <Carousel />
+      </Landing>
     </>
   )
 }

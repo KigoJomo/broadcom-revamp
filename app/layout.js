@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="w-screen h-[100dvh] overflow-hidden">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased w-full h-full flex flex-col overflow-y-scroll scrollbar-hidden relative`}
+        className={`w-screen h-full flex flex-col overflow-x-hidden overflow-y-scroll scrollbar-hidden relative`}
       >
         <Header />
         {children}
