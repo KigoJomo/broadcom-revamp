@@ -1,13 +1,19 @@
 import Image from 'next/image'
 import Landing from './components/Landing'
 import Carousel from './components/Home/Carousel'
+import Who from './components/Home/Who'
+import What from './components/Home/What'
+import Featured from './components/Home/Featured'
 
 export default function Home() {
   return (
     <>
-      <Landing className={'gap-0 p-6'}>
+      <Landing className={'gap-0 p-6 h-fit'}>
         <Carousel />
       </Landing>
+      <Who />
+      <What />
+      <Featured />
     </>
   )
 }
