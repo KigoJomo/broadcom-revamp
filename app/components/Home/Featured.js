@@ -49,7 +49,7 @@ const Product = ({ name, image, description, index }) => {
 
 const Featured = () => {
   return (
-    <section className="bg-background flex flex-col gap-6">
+    <section className="bg-background py-12 flex flex-col gap-6">
       <h1>featured products</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

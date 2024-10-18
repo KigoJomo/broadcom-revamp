@@ -4,6 +4,8 @@ import Carousel from './components/Home/Carousel'
 import Who from './components/Home/Who'
 import What from './components/Home/What'
 import Featured from './components/Home/Featured'
+import ChooseUs from './components/Home/ChooseUs'
+import ContactUs from './components/Home/ContactUs'
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       <Who />
       <What />
       <Featured />
+      <ChooseUs />
+      <ContactUs />
     </>
   )
 }
