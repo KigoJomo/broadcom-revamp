@@ -1,0 +1,111 @@
+[
+  {
+    "category": "Network Implementation Division",
+    "services": [
+      {
+        "title": "GSM Network Optimization",
+        "slug": "gsm-network-optimization",
+        "description": "This division conducts Drive Test to confirm GSM network coverage for our client using TEMS Investigation tool and advice accordingly. We supply and conduct training on the TEMS investigation tools as well.",
+        "details": [
+          "Installation & commissioning of GSM base stations, GSM antennas, and base station upgrades",
+          "Supply and installation of DC and AC power boards, change over units, generators, and GSM sites power upgrades",
+          "Installation and commissioning of WIMAX base stations, CPEs, configuration of all associated routers, and maintenance of the data network"
+        ],
+        "image": "/images/gsm-optimization.jpg"
+      },
+      {
+        "title": "GSM Sites Roll Out",
+        "slug": "gsm-sites-roll-out",
+        "description": "Broadband manages turnkey projects right from site acquisition, multi skills surveys and design, site build/construction, network design, installation, configuration & commissioning of GSM network.",
+        "details": [
+          "Site Acquisition: We negotiate for site lease and all site access logistics. We acquire site built approvals from local authorities and seek environmental site built approvals on behalf of our customers.",
+          "Site build/construction",
+          "Network design, installation, configuration & commissioning"
+        ],
+        "image": "/images/gsm-rollout.jpg"
+      },
+      {
+        "title": "Tower Rigging",
+        "slug": "tower-rigging",
+        "description": "Providing professional tower rigging services for safe and efficient deployment of telecom towers.",
+        "details": [
+          "Tower erection and maintenance",
+          "Antenna and transmission line installation",
+          "Safety compliance and inspection"
+        ],
+        "image": "/images/tower-rigging.jpg"
+      },
+      {
+        "title": "Civil Works",
+        "slug": "civil-works",
+        "description": "We carry out comprehensive civil works including site preparation, construction, and infrastructure development:",
+        "details": [
+          "Casting of communication tower foundation & tower erection, equipment shelter assembly, building perimeter fence as required by clients, manhole and all associated ducting’s.",
+          "Complete site power reticulations.",
+          "Installation of rectifiers and batteries.",
+          "Installation and commissioning of generators.",
+          "GSM base stations installation and commissioning.",
+          "Microwaves installation and commissioning.",
+          "Complete site as built documentation."
+        ],
+        "image": "/images/civil-works.jpg"
+      },
+      {
+        "title": "RF Networks",
+        "slug": "rf-networks",
+        "description": "Having a mobile network meeting all customers’ requirements is a big challenge. This is because the topology of the earth is very irregular. Buildings, tunnels, hills and valleys complicate Optimization of RF planning. In this regards, we have on board RF repeater solutions operating in all mobile technologies. Our partner in these solutions is REMOTEK who are ISO certified to design and manufacture these solutions.",
+        "details": [
+          "The offering include; GSM, UMTS, CDMA, UCDMA, Multi-band, Fiber optic repeaters, Cable boaster (Line amplifier) etc.",
+          "Detailed microwave radio network planning for both point to point transmission and point to multipoint access systems.",
+          "Installation and commissioning of various radio systems ranging from VHF, UHF, PDH to SDH."
+        ],
+        "image": "/images/rf-networks.jpg"
+      },
+      {
+        "title": "VSAT Installation",
+        "slug": "vsat-installation",
+        "description": "Expert VSAT installation services for reliable satellite communication, ensuring seamless connectivity in remote and underserved areas.",
+        "details": [
+          "Comprehensive site survey and planning to determine optimal VSAT placement",
+          "Professional installation and configuration of VSAT equipment for maximum performance",
+          "Ongoing maintenance and support services to ensure continuous and reliable operation"
+        ],
+        "image": "/images/vsat-installation.jpg"
+      }
+    ]
+  },
+  {
+    "category": "Solutions Division",
+    "services": [
+      {
+        "title": "Intelligent Transport Networks",
+        "slug": "intelligent-transport-networks",
+        "description": "High-speed, scalable transport networks powered by cutting-edge optical and photonic technology.",
+        "details": [
+          "Terabit-speed data transmission",
+          "Advanced photonic integrated circuits",
+          "Optical and wireless network integration"
+        ],
+        "image": "/images/transport-networks.jpg"
+      }
+      
+    ]
+  },
+  {
+    "category": "Managed Services Department",
+    "services": [
+      {
+        "title": "Generators",
+        "slug": "generators",
+        "description": "Providing reliable backup power solutions through advanced generator systems.",
+        "details": [
+          "Generator installation and maintenance",
+          "Fuel management and optimization",
+          "Remote monitoring and control"
+        ],
+        "image": "/images/generators.jpg"
+      }
+      
+    ]
+  }
+]

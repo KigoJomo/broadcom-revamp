@@ -5,6 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --gray: #292929;
   --purple: #6f42c1;
   --indigo: #6610f2;
   --blue: #007bff;
@@ -13,7 +14,7 @@
   --rose-pink: #e072a4ff;
   --mint-green: #b0e298ff;
   --font-size: 1rem;
-  --font-ratio: 1.618;
+  --font-ratio: 1.4;
 }
 
 @media (max-width: 768px) {
@@ -83,6 +84,8 @@ img {
 }
 
 .bg-indigo,
+.bg-foreground,
+.bg-gray,
 .bg-purple,
 .bg-blue,
 .bg-cyan,
@@ -160,7 +163,7 @@ html body {
 }
 html body section {
   flex-shrink: 0;
-  padding: 1rem 4rem;
+  padding: 1rem 8rem;
 }
 @media (max-width: 768px) {
   html body section {

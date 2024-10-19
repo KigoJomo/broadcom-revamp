@@ -27,7 +27,7 @@ const Product = ({ name, image, description, index }) => {
     <Link
       className={`product ${
         index === 0 ? 'bg-indigo' : index === 1 ? 'bg-blue' : 'bg-cyan'
-      } w-full aspect-[3/4] p-6 flex flex-col gap-6 overflow-hidden flex-shrink-0`}
+      } w-full aspect-[3/4] p-6 flex flex-col gap-6 overflow-hidden flex-shrink-0 shadow-2xl hover:-translate-y-4 transition-all duration-300`}
       href={`/products`}
     >
       <h2 className="text-background">{name}</h2>
@@ -50,7 +50,7 @@ const Product = ({ name, image, description, index }) => {
 const Featured = () => {
   return (
     <section className="bg-background py-12 flex flex-col gap-6">
-      <h1>featured products</h1>
+      <h1 className='md:text-center'>featured products</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {products.map((product, index) => (

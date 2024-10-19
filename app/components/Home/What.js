@@ -50,14 +50,14 @@ const ServiceLink = ({ name, href, icon }) => {
 const What = () => {
   return (
     <section className="bg-background flex flex-col gap-6">
-      <h1>Our Core Services</h1>
-      <p>
+      <h1 className='md:text-center'>Our Core Services</h1>
+      <p className='md:text-center'>
         At Broadband Communication Networks, we specialize in providing
         comprehensive telecommunication solutions that drive connectivity and
         enhance network performance. 
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:mt-6">
         {services.map((service, index) => (
           <ServiceLink key={index} {...service} />
         ))}
