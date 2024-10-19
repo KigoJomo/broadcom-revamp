@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Landing = ({heading, paragraph, children, className}) => {
+const Landing = ({heading, paragraph, children, className, style}) => {
   return (
-    <section className={`h-screen flex flex-col items-center gap-8 landing ${className}`}>
+    <section className={`h-screen flex flex-col items-center gap-8 landing ${className}`} style={style}>
       {heading && <h1 className="md:text-center order-2">{heading}</h1>}
       {paragraph && <p className='order-2'>{paragraph}</p>}
       {children}

@@ -4,7 +4,7 @@
 @tailwind utilities;
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #202020;
   --gray: #292929;
   --purple: #6f42c1;
   --indigo: #6610f2;
@@ -61,6 +61,7 @@ h3 {
 
 p {
   font-size: calc(var(--font-size) * 1);
+  color: var(--foreground);
   opacity: 0.8;
 }
 
@@ -89,7 +90,18 @@ img {
 .bg-purple,
 .bg-blue,
 .bg-cyan,
-.bg-transparent {
+.bg-transparent,
+.text-background {
+  color: var(--background);
+}
+.bg-indigo *,
+.bg-foreground *,
+.bg-gray *,
+.bg-purple *,
+.bg-blue *,
+.bg-cyan *,
+.bg-transparent *,
+.text-background * {
   color: var(--background);
 }
 
