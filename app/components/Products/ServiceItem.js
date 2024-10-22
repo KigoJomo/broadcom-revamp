@@ -5,19 +5,19 @@ const ServiceItem = ({ title, slug, description, image }) => {
   return (
     <Link
       href={`/products/${slug}`}
-      className="w-full aspect-[3/4] md:aspect-square flex-shrink-0 flex flex-col gap-4   relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-gradient-to-tl from-purple to-indigo before:opacity-25 before:-z-0 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+      className="w-full aspect-[3/4] flex-shrink-0 flex flex-col md:justify-between gap-0   relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-gradient-to-tl from-pink-500 to-indigo before:opacity-25 before:-z-0 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
     >
-      <div className="w-full h-full md:h-auto md:aspect-[4/3] md:p-2 md:z-[5] absolute md:static">
+      <div className="w-full h-full p-[2px] md:aspect-[4/3] md:h-auto md:p-2 -z-0 md:z-[5] absolute md:static before:absolute md:before:hidden before:top-0 before:left-0 before:w-full before:h-full before:bg-gradient-to-tl from-pink-500 to-indigo before:z-[-10]">
         <Image
           src={image}
           alt={`Broadcom ${title}`}
           width={500}
           height={500}
-          className="w-full h-full object-cover border border-background"
+          className="w-full h-full md:aspect-[4/3] object-cover border border-background"
         />
       </div>
 
-      <div className="w-full h-full md:h-[43.75%] p-2 md:p-4 flex flex-col justify-end gap-2 md:gap-4 relative md:static before:absolute md:before:hidden before:h-full before:w-full before:top-0 before:left-0 before:bg-gradient-to-t from-[#000000ce] to-[#00000000]">
+      <div className="w-full h-full md:h-fit p-2 md:p-4 flex flex-col justify-end gap-2 md:gap-4 relative md:static before:absolute md:before:hidden before:h-full before:w-full before:top-0 before:left-0 before:bg-gradient-to-t from-[#000000ce] to-[#00000000]">
 
         <p className="text-background md:text-foreground text-lg font-bold opacity-100 z-[5]">
           {title}
