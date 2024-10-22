@@ -11,7 +11,7 @@
           "Supply and installation of DC and AC power boards, change over units, generators, and GSM sites power upgrades",
           "Installation and commissioning of WIMAX base stations, CPEs, configuration of all associated routers, and maintenance of the data network"
         ],
-        "image": "/images/gsm-optimization.jpg"
+        "image": "/images/products/gsm-optimization.webp"
       },
       {
         "title": "GSM Sites Roll Out",
@@ -22,7 +22,7 @@
           "Site build/construction",
           "Network design, installation, configuration & commissioning"
         ],
-        "image": "/images/gsm-rollout.jpg"
+        "image": "/images/products/gsm-rollout.webp"
       },
       {
         "title": "Tower Rigging",
@@ -33,7 +33,7 @@
           "Antenna and transmission line installation",
           "Safety compliance and inspection"
         ],
-        "image": "/images/tower-rigging.jpg"
+        "image": "/images/products/tower-rigging.webp"
       },
       {
         "title": "Civil Works",
@@ -48,7 +48,7 @@
           "Microwaves installation and commissioning.",
           "Complete site as built documentation."
         ],
-        "image": "/images/civil-works.jpg"
+        "image": "/images/products/civil-works.webp"
       },
       {
         "title": "RF Networks",
@@ -59,7 +59,7 @@
           "Detailed microwave radio network planning for both point to point transmission and point to multipoint access systems.",
           "Installation and commissioning of various radio systems ranging from VHF, UHF, PDH to SDH."
         ],
-        "image": "/images/rf-networks.jpg"
+        "image": "/images/products/rf-networks.webp"
       },
       {
         "title": "VSAT Installation",
@@ -70,7 +70,7 @@
           "Professional installation and configuration of VSAT equipment for maximum performance",
           "Ongoing maintenance and support services to ensure continuous and reliable operation"
         ],
-        "image": "/images/vsat-installation.jpg"
+        "image": "/images/products/vsat-installation.webp"
       }
     ]
   },
@@ -88,7 +88,7 @@
           "Utilize photonic integrated circuits (PICs) to condense optical components onto a single micro-chip.",
           "Combine optical speed with the simplicity of the digital domain."
         ],
-        "image": "/images/transport-networks.jpg"
+        "image": "/images/products/transport-networks.webp"
       },
       {
         "title": "Access Networks",
@@ -99,7 +99,7 @@
           "Allow subscribers effortless access to content with high-quality service.",
           "Deliver optimal broadband service with flexibility and mobility."
         ],
-        "image": "/images/access-networks.jpg"
+        "image": "/images/products/access-networks.webp"
       },
       {
         "title": "Wireless Networks",
@@ -109,7 +109,7 @@
           "Offer test and measurement equipment for wireless communication and digital terrestrial television.",
           "Specialize in spectrum analyzers, RF power meters, and field strength test solutions."
         ],
-        "image": "/images/wireless-networks.jpg"
+        "image": "/images/products/wireless-networks.webp"
       },
       {
         "title": "Billing Solutions",
@@ -120,7 +120,7 @@
           "Manage provisioning, rating, charging, billing, and customer care.",
           "Help drive revenue, increase profitability, and enhance customer experience."
         ],
-        "image": "/images/billing-solutions.jpg"
+        "image": "/images/products/billing-solutions.webp"
       },
       {
         "title": "Mobile Broadband",
@@ -131,7 +131,7 @@
           "Deliver Software Defined Networks (SDN) and extensive small cell coverage.",
           "Enhance subscriber experience with scalable, cost-effective network solutions."
         ],
-        "image": "/images/mobile-broadband.jpg"
+        "image": "/images/products/mobile-broadband.webp"
       },
       {
         "title": "End To End Network Intelligence",
@@ -141,7 +141,7 @@
           "Provide customer experience, assurance, and test solutions for fixed and mobile networks.",
           "Cover advanced technologies such as LTE, 3G, VoIP, and triple play."
         ],
-        "image": "/images/end-to-end-network-intelligence.jpg"
+        "image": "/images/products/end-to-end-network-intelligence.webp"
       },
       {
         "title": "Mobile Network Optimization & Benchmarking Tools",
@@ -151,7 +151,7 @@
           "Enable field testing and automated data processing for mobile networks.",
           "Flagship products include TEMS Investigation, TEMS Discovery, and TEMS Monitor Master."
         ],
-        "image": "/images/mobile-network-optimization.jpg"
+        "image": "/images/products/mobile-network-optimization.webp"
       },
       {
         "title": "Optic Fibre Solutions",
@@ -162,7 +162,7 @@
           "Provide solutions for GPON and Active Ethernet (AE) fiber access technologies.",
           "Monitor fiber networks end-to-end with VIAVI's test solutions."
         ],
-        "image": "/images/optic-fibre-solutions.jpg"
+        "image": "/images/products/optic-fibre-solutions.webp"
       },
       {
         "title": "Green Energy Solutions",
@@ -172,7 +172,7 @@
           "Design and deploy renewable energy systems tailored to specific site needs.",
           "Utilize smart controllers and remote management to reduce operational costs."
         ],
-        "image": "/images/green-energy-solutions.jpg"
+        "image": "/images/products/green-energy-solutions.webp"
       },
       {
         "title": "M2M",
@@ -182,7 +182,7 @@
           "Offer Smart Water Meters with advanced technical innovations and prepaid meter functions.",
           "Provide energy metering solutions in partnership with Yantai Dongfang Wisdom Electric Co.,Ltd."
         ],
-        "image": "/images/m2m.jpg"
+        "image": "/images/products/m2m.webp"
       }
     ]
   },
@@ -198,7 +198,7 @@
           "Maintenance tracked per manufacturer’s specifications.",
           "Overhauls handled by qualified technicians."
         ],
-        "image": "/images/generators.jpg"
+        "image": "/images/products/generators.webp"
       },
       {
         "title": "Air Conditioner Systems",
@@ -209,7 +209,7 @@
           "Refrigerant levels are maintained per manufacturer recommendations.",
           "Casings are inspected, and changeover cycling is tested."
         ],
-        "image": "/images/air-conditioner-systems.jpg"
+        "image": "/images/products/air-conditioner-systems.webp"
       },
       {
         "title": "Battery Banks",
@@ -220,7 +220,7 @@
           "Discharge tests performed according to manufacturer guidelines.",
           "Early battery issues detected using MEGGER BATTERY TESTER."
         ],
-        "image": "/images/battery-banks.jpg"
+        "image": "/images/products/battery-banks.webp"
       },
       {
         "title": "Rectifier & Inverter Systems",
@@ -231,7 +231,7 @@
           "Input and output voltages and currents are measured for accuracy.",
           "System loading is analyzed, and upgrades are recommended where necessary."
         ],
-        "image": "/images/rectifier-inverter-systems.jpg"
+        "image": "/images/products/rectifier-inverter-systems.webp"
       },
       {
         "title": "Solar Systems",
@@ -242,7 +242,7 @@
           "Visual inspections performed to detect damage.",
           "Damaged modules are replaced during maintenance."
         ],
-        "image": "/images/solar-systems.jpg"
+        "image": "/images/products/solar-systems.webp"
       },
       {
         "title": "Wind Systems",
@@ -253,7 +253,7 @@
           "Mechanical brakes are engaged during maintenance for safety.",
           "Maintenance is avoided when wind exceeds 10 m/s for safety."
         ],
-        "image": "/images/wind-systems.jpg"
+        "image": "/images/products/wind-systems.webp"
       },
       {
         "title": "Site Fueling",
@@ -264,7 +264,7 @@
           "Fueling process is carefully managed to prevent spillage.",
           "We ensure no site goes out of service due to fuel shortages."
         ],
-        "image": "/images/site-fueling.jpg"
+        "image": "/images/products/site-fueling.webp"
       },
       {
         "title": "Grid Power Management",
@@ -275,7 +275,7 @@
           "Damaged devices like circuit breakers are replaced promptly.",
           "Scheduled outages are managed to minimize service disruptions."
         ],
-        "image": "/images/grid-power-management.jpg"
+        "image": "/images/products/grid-power-management.webp"
       },
       {
         "title": "Environmental Alarm Monitoring & Escalation",
@@ -286,7 +286,7 @@
           "Escalation procedures are strictly followed per SLA guidelines.",
           "Strategic plans and flow charts ensure efficient event resolution."
         ],
-        "image": "/images/environmental-alarm-monitoring.jpg"
+        "image": "/images/products/environmental-alarm-monitoring.webp"
       },
       {
         "title": "Site Facilitation & Control",
@@ -297,7 +297,7 @@
           "Contractor access is facilitated with proper approval processes.",
           "Violations by contractors are managed according to agreements."
         ],
-        "image": "/images/site-facilitation-control.jpg"
+        "image": "/images/products/site-facilitation-control.webp"
       },
       {
         "title": "Site Security",
@@ -308,7 +308,7 @@
           "Security contracts ensure fast response times.",
           "Sites are protected with robust infrastructure security."
         ],
-        "image": "/images/site-security.jpg"
+        "image": "/images/products/site-security.webp"
       },
       {
         "title": "Electric Fence",
@@ -319,7 +319,7 @@
           "Faulty insulators and strainers are replaced with high-quality components.",
           "Energizer batteries are regularly checked to maintain functionality."
         ],
-        "image": "/images/electric-fence.jpg"
+        "image": "/images/products/electric-fence.webp"
       }
     ]
   }
