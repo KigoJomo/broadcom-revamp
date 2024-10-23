@@ -182,9 +182,9 @@ img {
 }
 
 .overlap-parent{
+  box-sizing: border-box;
   display: grid;
-  grid-template-areas: stack;
-  justify-items: end;
+  align-items: start;
 
   & > * {
     grid-area: stack;

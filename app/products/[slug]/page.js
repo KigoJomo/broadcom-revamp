@@ -43,18 +43,18 @@ export default async function ProductPage({ params }) {
 
   return (
     <section className="p-0 flex flex-col gap-12">
-      <div className="hero w-full p-0 flex-shrink-0 aspect-[1/1] md:aspect-[23/9]  overlap-parent">
+      <div className="hero w-full p-0 aspect-[1/1] md:aspect-[23/9] grid grid-cols-1 grid-rows-1">
         <Image
           src={service.image}
           alt={`Broadcom ${service.title}`}
           width={1000}
           height={1000}
-          className="w-full h-full m-0 flex-shrink-0 aspect-[1/1] md:aspect-[23/9] object-cover z-[2] md:top-0 align-top"
+          className="w-full h-full col-start-1 row-start-1 m-0 aspect-[1/1] md:aspect-[23/9] object-cover z-[2]"
         />
 
-        <div className="tint w-full h-full z-[3] bg-gradient-to-t from-[#000000ce] to-[#00000000]"></div>
+        <div className="tint w-full h-full col-start-1 row-start-1 z-[3] bg-gradient-to-t from-[#000000ce] to-[#00000000]"></div>
 
-        <h1 className='h-fit mt-auto px-4 py-2 text-background z-[5]'>{service.title}</h1>
+        <h1 className='h-fit col-start-1 row-start-1 mt-auto px-4 py-2 text-background z-[5]'>{service.title}</h1>
       </div>
 
       <div className="w-full p-4">
