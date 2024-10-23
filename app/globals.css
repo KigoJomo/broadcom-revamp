@@ -168,6 +168,15 @@ img {
   height: 80%;
 }
 
+.overlap-parent {
+  display: grid;
+  grid-template-areas: stack;
+  justify-items: end;
+}
+.overlap-parent > * {
+  grid-area: stack;
+}
+
 html body {
   color: var(--foreground);
   background: var(--background);

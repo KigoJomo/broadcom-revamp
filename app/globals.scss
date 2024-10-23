@@ -181,6 +181,16 @@ img {
   }
 }
 
+.overlap-parent{
+  display: grid;
+  grid-template-areas: stack;
+  justify-items: end;
+
+  & > * {
+    grid-area: stack;
+  }
+}
+
 html {
   body {
     color: var(--foreground);
