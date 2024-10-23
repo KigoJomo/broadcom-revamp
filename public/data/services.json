@@ -5,7 +5,7 @@
       {
         "title": "GSM Network Optimization",
         "slug": "gsm-network-optimization",
-        "description": "This division conducts Drive Test to confirm GSM network coverage for our client using TEMS Investigation tool and advice accordingly. We supply and conduct training on the TEMS investigation tools as well.",
+        "description": "This division conducts Drive Test to confirm GSM network coverage for our client using TEMS Investigation tool and advice accordingly. \n\n We supply and conduct training on the TEMS investigation tools as well.",
         "details": [
           "Installation & commissioning of GSM base stations, GSM antennas, and base station upgrades",
           "Supply and installation of DC and AC power boards, change over units, generators, and GSM sites power upgrades",
@@ -18,7 +18,7 @@
         "slug": "gsm-sites-roll-out",
         "description": "Broadband manages turnkey projects right from site acquisition, multi skills surveys and design, site build/construction, network design, installation, configuration & commissioning of GSM network.",
         "details": [
-          "Site Acquisition: We negotiate for site lease and all site access logistics. We acquire site built approvals from local authorities and seek environmental site built approvals on behalf of our customers.",
+          "Site Acquisition: We negotiate for site lease and all site access logistics. \nWe acquire site built approvals from local authorities and seek environmental site built approvals on behalf of our customers.",
           "Site build/construction",
           "Network design, installation, configuration & commissioning"
         ],
@@ -53,7 +53,7 @@
       {
         "title": "RF Networks",
         "slug": "rf-networks",
-        "description": "Having a mobile network meeting all customers’ requirements is a big challenge. This is because the topology of the earth is very irregular. Buildings, tunnels, hills and valleys complicate Optimization of RF planning. In this regards, we have on board RF repeater solutions operating in all mobile technologies. Our partner in these solutions is REMOTEK who are ISO certified to design and manufacture these solutions.",
+        "description": "Having a mobile network meeting all customers’ requirements is a big challenge. \nThis is because the topology of the earth is very irregular. Buildings, tunnels, hills and valleys complicate Optimization of RF planning. \n\nIn this regards, we have on board RF repeater solutions operating in all mobile technologies. Our partner in these solutions is REMOTEK who are ISO certified to design and manufacture these solutions.",
         "details": [
           "The offering include; GSM, UMTS, CDMA, UCDMA, Multi-band, Fiber optic repeaters, Cable boaster (Line amplifier) etc.",
           "Detailed microwave radio network planning for both point to point transmission and point to multipoint access systems.",
@@ -192,7 +192,7 @@
       {
         "title": "Generators",
         "slug": "generators",
-        "description": "Our skilled personnel maintain generators per manufacturer recommendations to ensure optimal performance. Routine checks, cleanings, and system tests are done regularly.",
+        "description": "Our skilled personnel maintain generators per manufacturer recommendations to ensure optimal performance. \nRoutine checks, cleanings, and system tests are done regularly.",
         "details": [
           "Mobile generators deployed fast in case of breakdowns.",
           "Maintenance tracked per manufacturer’s specifications.",

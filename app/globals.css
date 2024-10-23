@@ -59,7 +59,7 @@ h3 {
   font-weight: 600;
 }
 
-p {
+p, li {
   font-size: calc(var(--font-size) * 1);
   color: var(--foreground);
   opacity: 0.8;
@@ -175,6 +175,20 @@ img {
 }
 .overlap-parent > * {
   grid-area: stack;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 html body {

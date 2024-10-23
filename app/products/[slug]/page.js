@@ -3,6 +3,7 @@
 import { promises as fs } from 'fs'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
+import ServiceTabs from '@/app/components/Products/ServiceTabs'
 
 // Generate static params for all possible slugs
 export async function generateStaticParams() {
@@ -42,7 +43,7 @@ export default async function ProductPage({ params }) {
   }
 
   return (
-    <section className="p-0 flex flex-col gap-12">
+    <section className="p-0 pb-16 flex flex-col gap-12">
       <div className="hero w-full p-0 aspect-[1/1] md:aspect-[23/9] grid grid-cols-1 grid-rows-1">
         <Image
           src={service.image}
@@ -54,12 +55,15 @@ export default async function ProductPage({ params }) {
 
         <div className="tint w-full h-full col-start-1 row-start-1 z-[3] bg-gradient-to-t from-[#000000ce] to-[#00000000]"></div>
 
-        <h1 className='h-fit col-start-1 row-start-1 mt-auto px-4 py-2 text-background z-[5]'>{service.title}</h1>
+        <h1 className='h-fit col-start-1 row-start-1 mt-auto px-4 md:px-32 py-2 md:py-4 text-background z-[5]'>{service.title}</h1>
       </div>
 
-      <div className="w-full p-4">
-        <p>{service.description}</p>
-      </div>
+      <ServiceTabs 
+        title={service.title}
+        description={service.description}
+        details={service.details}
+      />
+
     </section>
   )
 }
