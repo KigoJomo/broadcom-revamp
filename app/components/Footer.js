@@ -3,6 +3,9 @@ import React from 'react'
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa'
 import { FaXTwitter } from 'react-icons/fa6'
 
+
+// TODO: Update links
+// TODO: Create a Privacy Policy Page
 const linkGroups = [
   {
     title: 'Corporate',

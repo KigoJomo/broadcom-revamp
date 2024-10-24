@@ -1,6 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+
+// TODO: Make the background white and the border a gradient
+
 const ServiceItem = ({ title, slug, description, image }) => {
   return (
     <Link

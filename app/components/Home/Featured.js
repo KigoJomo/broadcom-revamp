@@ -3,6 +3,8 @@ import Link from 'next/link'
 import React from 'react'
 import { FaArrowRightLong } from "react-icons/fa6";
 
+
+// TODO: Replace products with items from services.json
 const products = [
   {
     name: 'fibre-splicer',

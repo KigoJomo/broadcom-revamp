@@ -80,7 +80,9 @@ const ServiceTabs = ({ title, description, details }) => {
 
         <div className="w-full border-t mt-12 py-4 flex flex-col gap-6">
           <h3 className="text-foreground text-lg font-semibold">
-            Ready to get started with <span className='mont text-purple'>{title}?</span>
+            Ready to get started with{' '}
+            {/* TODO: Make this a link to the top of the page, or the section or smth */}
+            <span className="mont text-purple">{title}?</span>
           </h3>
 
           <p className="text-sm">
@@ -88,7 +90,7 @@ const ServiceTabs = ({ title, description, details }) => {
             requirements.
           </p>
 
-          <CustomLink text={"contact us"} href={"/contact"} />
+          <CustomLink text={'contact us'} href={'/contact'} />
         </div>
       </div>
     </div>

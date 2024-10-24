@@ -14,6 +14,9 @@ const pages = [
   { name: 'contact us', href: '/contact' },
 ]
 
+// TODO: Link for the current page should be highlighted
+// TODO: Clicking outside the nav in mobile view should close the menu
+
 const Header = () => {
   const [open, setOpen] = useState(false)
 
