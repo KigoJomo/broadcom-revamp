@@ -16,10 +16,10 @@ export default function ReachOut() {
       </video>
 
       <div 
-        className="col-start-1 row-start-1 w-full h-full bg-gradient-to-t from-black via-black/70 to-transparent"
+        className="col-start-1 row-start-1 z-[3] w-full h-full bg-black/50"
       ></div>
 
-      <div className="col-start-1 row-start-1 flex flex-col items-center justify-center gap-8 p-4">
+      <div className="col-start-1 row-start-1 z-[4] flex flex-col items-center justify-center gap-8 p-4">
 
         <h1 className="text-background text-4xl font-bold hidden md:flex">Reach out to us</h1>
 
