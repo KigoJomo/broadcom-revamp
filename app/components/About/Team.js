@@ -36,7 +36,7 @@ const members = [
   },
 ]
 
-const SLIDE_INTERVAL = typeof window !== 'undefined' && window.innerWidth <= 768 ? 2000 : 5000
+const SLIDE_INTERVAL = typeof window !== 'undefined' && window.innerWidth <= 768 ? 3000 : 6000
 const SLIDE_TRANSITION = 0.7
 
 export default function Team() {

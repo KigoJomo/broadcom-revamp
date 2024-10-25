@@ -1,7 +1,7 @@
 import React from 'react'
 import CustomLink from '../CustomLink'
 
-const ContactUs = () => {
+const ContactUs = ({className}) => {
   return (
     <section className="bg-transparent py-24 flex flex-col md:flex-row items-center gap-8 md:gap-12">
 

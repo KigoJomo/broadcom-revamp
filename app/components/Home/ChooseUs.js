@@ -30,7 +30,7 @@ const Point = ({ title, description }) => {
 const ChooseUs = () => {
   return (
     <section className="bg-background py-24 flex flex-col gap-8 md:gap-12">
-      <h1 className='text-center'>why choose us</h1>
+      <h1 className='w-fit mx-auto mb-6 lines-header'>why choose us</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
         {points.map((point) => (
           <Point key={point.title} {...point} />

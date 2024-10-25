@@ -6,7 +6,7 @@ export default function Mission() {
     <section className="bg-background py-32">
       <div className="flex flex-col md:flex-row gap-8">
         <div className="w-full md:w-1/2 md:aspect-[4/3] flex flex-col gap-8 md:justify-evenly">
-          <h1 className="text- w-full">our mission</h1>
+          <h1 className="w-fit mx-auto mb-6 lines-header">our mission</h1>
 
           <p>
             At Broadcom, our mission is to enable seamless communication and
