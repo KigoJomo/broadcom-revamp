@@ -2,37 +2,14 @@
 
 import React, { useState } from 'react'
 import ContactForm from './ContactForm'
-
-const TabContent1 = () => (
-  <div className="p-4">
-    <h2 className="text-xl font-bold mb-2">First Tab Content</h2>
-    <p>This is the content for the first tab. You can put anything here.</p>
-  </div>
-)
-
-const TabContent2 = () => (
-  <div className="p-4">
-    <h2 className="text-xl font-bold mb-2">Second Tab Content</h2>
-    <p>
-      This is the content for the second tab. It can be completely different.
-    </p>
-  </div>
-)
-
-const TabContent3 = () => (
-  <div className="p-4">
-    <h2 className="text-xl font-bold mb-2">Third Tab Content</h2>
-    <p>
-      Here&apos;s the content for the third tab. Each tab can have unique
-      content.
-    </p>
-  </div>
-)
+import Offices from './Offices'
+import FAQ from './FAQ'
+import InfoHub from './InfoHub'
 
 const tabs = [
   { title: 'Form', component: ContactForm },
-  { title: 'Offices', component: TabContent2 },
-  { title: 'FAQs', component: TabContent3 },
+  { title: 'Offices', component: Offices },
+  { title: 'FAQs', component: FAQ },
 ]
 
 const ContactMethods = () => {
@@ -62,7 +39,9 @@ const ContactMethods = () => {
         </div>
       </div>
 
-      <div className="info-hub w-full md:col-span-1"></div>
+      <div className="info-hub w-full md:col-span-1 px-4 py-6 md:pl-16">
+        <InfoHub />
+      </div>
     </section>
   )
 }
