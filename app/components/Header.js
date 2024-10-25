@@ -16,6 +16,7 @@ const pages = [
 
 // TODO: Link for the current page should be highlighted
 // TODO: Clicking outside the nav in mobile view should close the menu
+// TODO: Breadcrumbs
 
 const Header = () => {
   const [open, setOpen] = useState(false)

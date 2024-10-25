@@ -47,10 +47,10 @@ const ServiceLink = ({ name, href, icon }) => {
   )
 }
 
-const What = () => {
+const What = ({heading = 'Our Core Services'}) => {
   return (
-    <section className="bg-background flex flex-col gap-6">
-      <h1 className='md:text-center'>Our Core Services</h1>
+    <section className="overflow-x-hidden bg-background flex flex-col gap-6">
+      <h1 className='w-fit mx-auto lines-header'>{heading}</h1>
       <p className='md:text-center'>
         At Broadband Communication Networks, we specialize in providing
         comprehensive telecommunication solutions that drive connectivity and

@@ -1,0 +1,128 @@
+'use client'
+
+import React, { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
+
+const members = [
+  {
+    role: 'CEO',
+    name: 'Bernard G. Wahome',
+    image: '/images/team/bernard.webp',
+    description:
+      'Bernard is the Founder, CEO, and Managing Director of Broadband Group with 28 years of experience in Telecommunications. He has driven mobile network deployments across East Africa. Bernard holds an MBA (JKUAT), Mini Telecom MBA (UK), BSc IT (JKUAT), and a Telecom Engineering Diploma. He is a member of the Kenya Institute of Management (KIM) and is committed to ICT transformation and improving customer experience across Africa.',
+  },
+  {
+    role: 'General Manager, Managed Services',
+    name: 'Patrick Kimanzi',
+    image: '/images/team/patrick.webp',
+    description:
+      'Patrick is the GM of Managed Services at Broadband Group, handling Business Development, Service Management, and Key Accounts. With 25 years in Telecoms, his experience spans PSTN and PLMN networks, having held management roles at Telekom Kenya, Vivendi, Celtel, and Nokia Siemens. He holds a Diploma in Telecom (KNEC), Advanced Diploma from Multimedia University, and a Mini MBA from Wits Business School. He focuses on business processes re-engineering, innovation, and operational excellence.',
+  },
+  {
+    role: 'General Manager, Finance and Administration',
+    name: 'Susan Gichia',
+    image: '/images/team/susan.webp',
+    description:
+      'Susan, GM of Finance & Admin, directs financial management, ensuring resource optimization to meet the company’s goals. With 27 years in various industries, she has expertise in product costing, project accounting, and statutory regulations. Susan’s aim is to enhance internal and external customer experiences while driving financial growth. She holds a degree from Strathmore University and is a member of ICPAK.',
+  },
+  {
+    role: 'General Manager, Implementation Solutions',
+    name: 'Michael Wambugu',
+    image: '/images/team/michael.webp',
+    description:
+      'Michael is the GM of Implementation at Broadband Group, leading project rollouts from initiation to closure. He has 14 years of expertise in project and technical schedule management, focusing on high-standard operations and business growth. Michael’s leadership has driven effective in-house teams and project success. He holds an MBA in Strategic Management from Moi University and a Civil Engineering degree from the University of Nairobi.',
+  },
+]
+
+const SLIDE_INTERVAL = 10000
+const SLIDE_TRANSITION = 0.7
+
+export default function Team() {
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true)
+
+  useEffect(() => {
+    if (isAutoPlaying) {
+      const interval = setInterval(() => {
+        setCurrentIndex((prev) => (prev + 1) % members.length)
+      }, SLIDE_INTERVAL)
+      return () => clearInterval(interval)
+    }
+  }, [isAutoPlaying])
+
+  return (
+    <section className="py-32 bg-background">
+      <h1 className="w-fit mx-auto mb-6 lines-header">our team</h1>
+
+      {/* Slider Container */}
+      <div className="relative w-full overflow-hidden">
+        <div className="w-full">
+          {/* Members Row */}
+          <div className="grid grid-cols-4 gap-0 md:px-8 mb-8">
+            {members.map((member, index) => (
+              <motion.div
+                key={member.name}
+                className="relative flex-shrink-0 w-full cursor-pointer"
+                animate={{
+                  opacity: index === currentIndex ? 1 : 0.5,
+                  scale: index === currentIndex ? 1 : 0.85,
+                }}
+                onClick={() => {
+                  setCurrentIndex(index)
+                }}
+                transition={{ duration: SLIDE_TRANSITION }}
+              >
+                <div className="w-full aspect-[3/4] relative overflow-hidden shadow-2xl">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="w-full object-cover border border-purple"
+                  />
+                  <div className="w-full absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                    <h3 className="text-background">{member.name}</h3>
+                    <p className="text-background text-sm">{member.role}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Description */}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentIndex}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: SLIDE_TRANSITION }}
+              className="max-w-2xl mx-auto text-center px-4"
+            >
+              <p className="text-base/relaxed">
+                {members[currentIndex].description}
+              </p>
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Navigation Dots */}
+          <div className="flex justify-center gap-2 mt-8">
+            {members.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => {
+                  setCurrentIndex(index)
+                  setIsAutoPlaying(false)
+                }}
+                className={`w-4 h-4 rounded-full transition-colors duration-300 ${
+                  index === currentIndex ? 'bg-indigo' : 'bg-gray opacity-50'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
