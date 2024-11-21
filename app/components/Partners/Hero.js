@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="w-full p-0 aspect-square md:aspect-[3/1] bg-background grid grid-cols-1 grid-rows-1">
       <Image
         src="/images/handhsake.webp"
-        alt="Broadcom"
+        alt="Broadband Communication Networks Ltd"
         width={1000}
         height={1000}
         className="w-full aspect-square md:aspect-[3/1] col-start-1 row-start-1 z-[2]"
@@ -17,9 +17,11 @@ const Hero = () => {
       <div className="w-full md:w-2/3 col-start-1 row-start-1 z-[5] flex flex-col gap-6  text-background mt-auto px-4 md:px-32 py-2 md:py-4">
         <h1 className="">Our Valued, Strategic Partners</h1>
 
-        <p className="opacity-60 md:w-2/3">Our partners are at the core of delivering exceptional services and innovative solutions across various industries.</p>
+        <p className="opacity-60 md:w-2/3">
+          Our partners are at the core of delivering exceptional services and
+          innovative solutions across various industries.
+        </p>
       </div>
-
     </section>
   )
 }

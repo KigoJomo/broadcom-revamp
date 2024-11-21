@@ -1,96 +1,113 @@
-"use client"
+'use client'
 
-import React, { useState, useMemo } from 'react';
-import { LuSearch as Search, LuPlus as Plus, LuMinus as Minus } from 'react-icons/lu';
+import React, { useState, useMemo } from 'react'
+import {
+  LuSearch as Search,
+  LuPlus as Plus,
+  LuMinus as Minus,
+} from 'react-icons/lu'
 
 const faqData = {
-  "General Inquiries": [
+  'General Inquiries': [
     {
-      question: "What services does Broadcom offer?",
-      answer: "Broadcom offers comprehensive network solutions through key divisions including Network Implementation, Solutions Division, and Managed Services.",
-      keywords: ["services", "offerings", "solutions", "network"]
+      question:
+        'What services does Broadband Communication Networks Ltd offer?',
+      answer:
+        'Broadband Communication Networks Ltd offers comprehensive network solutions through key divisions including Network Implementation, Solutions Division, and Managed Services.',
+      keywords: ['services', 'offerings', 'solutions', 'network'],
     },
     {
-      question: "How can I contact Broadcom for support?",
-      answer: "You can reach us through multiple channels. For immediate assistance, please click the 'Form' tab above to submit a support request.",
-      keywords: ["contact", "support", "help", "reach"]
+      question:
+        'How can I contact Broadband Communication Networks Ltd for support?',
+      answer:
+        "You can reach us through multiple channels. For immediate assistance, please click the 'Form' tab above to submit a support request.",
+      keywords: ['contact', 'support', 'help', 'reach'],
     },
     {
-      question: "Where are Broadcom's offices located?",
-      answer: "To view our office locations, please click the 'Offices' tab above to access our interactive map.",
-      keywords: ["location", "offices", "address"]
-    }
+      question:
+        "Where are Broadband Communication Networks Ltd's offices located?",
+      answer:
+        "To view our office locations, please click the 'Offices' tab above to access our interactive map.",
+      keywords: ['location', 'offices', 'address'],
+    },
   ],
-  "Technical Support": [
+  'Technical Support': [
     {
-      question: "How do I request technical support for my network?",
-      answer: "To request technical support, submit a ticket through our support portal or contact our 24/7 technical support team.",
-      keywords: ["technical", "support", "network", "help"]
+      question: 'How do I request technical support for my network?',
+      answer:
+        'To request technical support, submit a ticket through our support portal or contact our 24/7 technical support team.',
+      keywords: ['technical', 'support', 'network', 'help'],
     },
     {
-      question: "What should I do if I encounter a network outage?",
-      answer: "In case of a network outage, first check our network status page for any known issues. For emergency support, contact our technical team immediately.",
-      keywords: ["outage", "network", "emergency", "down"]
+      question: 'What should I do if I encounter a network outage?',
+      answer:
+        'In case of a network outage, first check our network status page for any known issues. For emergency support, contact our technical team immediately.',
+      keywords: ['outage', 'network', 'emergency', 'down'],
     },
     {
-      question: "Which tools does Broadcom use for network optimization?",
-      answer: "We utilize industry-leading tools including VIAVI's test solutions for comprehensive network optimization and monitoring.",
-      keywords: ["tools", "optimization", "network", "monitoring"]
-    }
+      question:
+        'Which tools does Broadband Communication Networks Ltd use for network optimization?',
+      answer:
+        "We utilize industry-leading tools including VIAVI's test solutions for comprehensive network optimization and monitoring.",
+      keywords: ['tools', 'optimization', 'network', 'monitoring'],
+    },
   ],
-  "Billing & Payments": [
+  'Billing & Payments': [
     {
-      question: "What payment methods does Broadcom accept?",
-      answer: "We accept major credit cards and bank transfers. For detailed billing information, please contact our billing department.",
-      keywords: ["payment", "billing", "credit card", "bank transfer"]
+      question:
+        'What payment methods does Broadband Communication Networks Ltd accept?',
+      answer:
+        'We accept major credit cards and bank transfers. For detailed billing information, please contact our billing department.',
+      keywords: ['payment', 'billing', 'credit card', 'bank transfer'],
     },
     {
-      question: "How do I access my billing information or make a payment?",
-      answer: "Access your billing information through our secure client portal. For assistance, contact our billing department.",
-      keywords: ["billing", "payment", "portal", "access"]
-    }
-  ]
-};
+      question: 'How do I access my billing information or make a payment?',
+      answer:
+        'Access your billing information through our secure client portal. For assistance, contact our billing department.',
+      keywords: ['billing', 'payment', 'portal', 'access'],
+    },
+  ],
+}
 
 const FAQ = () => {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("all");
-  const [expandedItems, setExpandedItems] = useState(new Set());
+  const [searchQuery, setSearchQuery] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [expandedItems, setExpandedItems] = useState(new Set())
 
-  const categories = ["all", ...Object.keys(faqData)];
+  const categories = ['all', ...Object.keys(faqData)]
 
   const toggleQuestion = (category, index) => {
-    const key = `${category}-${index}`;
-    const newExpanded = new Set(expandedItems);
+    const key = `${category}-${index}`
+    const newExpanded = new Set(expandedItems)
     if (expandedItems.has(key)) {
-      newExpanded.delete(key);
+      newExpanded.delete(key)
     } else {
-      newExpanded.add(key);
+      newExpanded.add(key)
     }
-    setExpandedItems(newExpanded);
-  };
+    setExpandedItems(newExpanded)
+  }
 
   const filteredFAQs = useMemo(() => {
-    const query = searchQuery.toLowerCase();
-    let filtered = {};
+    const query = searchQuery.toLowerCase()
+    let filtered = {}
 
     Object.entries(faqData).forEach(([category, questions]) => {
-      if (selectedCategory === "all" || selectedCategory === category) {
+      if (selectedCategory === 'all' || selectedCategory === category) {
         const filteredQuestions = questions.filter(
           ({ question, answer, keywords }) =>
             question.toLowerCase().includes(query) ||
             answer.toLowerCase().includes(query) ||
-            keywords.some(k => k.toLowerCase().includes(query))
-        );
+            keywords.some((k) => k.toLowerCase().includes(query))
+        )
 
         if (filteredQuestions.length > 0) {
-          filtered[category] = filteredQuestions;
+          filtered[category] = filteredQuestions
         }
       }
-    });
+    })
 
-    return filtered;
-  }, [searchQuery, selectedCategory]);
+    return filtered
+  }, [searchQuery, selectedCategory])
 
   return (
     <div className="w-full max-w-4xl mx-auto px-4 py-8">
@@ -130,8 +147,8 @@ const FAQ = () => {
             <h2 className="text-xl font-bold mb-4 text-purple">{category}</h2>
             <div className="space-y-2">
               {questions.map((faq, index) => {
-                const key = `${category}-${index}`;
-                const isExpanded = expandedItems.has(key);
+                const key = `${category}-${index}`
+                const isExpanded = expandedItems.has(key)
 
                 return (
                   <div key={key} className="border border-gray">
@@ -139,7 +156,9 @@ const FAQ = () => {
                       onClick={() => toggleQuestion(category, index)}
                       className="w-full px-4 py-3 flex justify-between items-center hover:bg-light-gray hover:bg-opacity"
                     >
-                      <span className="text-left font-medium">{faq.question}</span>
+                      <span className="text-left font-medium">
+                        {faq.question}
+                      </span>
                       {isExpanded ? (
                         <Minus className="w-5 h-5 flex-shrink-0 text-indigo" />
                       ) : (
@@ -156,7 +175,7 @@ const FAQ = () => {
                       </div>
                     </div>
                   </div>
-                );
+                )
               })}
             </div>
           </div>
@@ -170,7 +189,7 @@ const FAQ = () => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default FAQ;
+export default FAQ

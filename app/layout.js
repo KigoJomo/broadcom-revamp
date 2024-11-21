@@ -15,7 +15,7 @@ const geistMono = localFont({
 })
 
 export const metadata = {
-  title: 'Broadcom',
+  title: 'Broadband Communication Networks Ltd',
   description: 'Broadband Communications Networks',
 }
 

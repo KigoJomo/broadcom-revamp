@@ -1,16 +1,14 @@
-"use client"
+'use client'
 
-import React, { useState } from 'react';
-import { LuAlertCircle as AlertCircle, LuCheckCircle2 as CheckCircle2, LuChevronRight as ChevronRight } from 'react-icons/lu';
+import React, { useState } from 'react'
+import {
+  LuAlertCircle as AlertCircle,
+  LuCheckCircle2 as CheckCircle2,
+  LuChevronRight as ChevronRight,
+} from 'react-icons/lu'
 
 // Input wrapper component for consistent styling and structure
-const InputWrapper = ({ 
-  label, 
-  children, 
-  required, 
-  error, 
-  className = "" 
-}) => (
+const InputWrapper = ({ label, children, required, error, className = '' }) => (
   <div className={`mb-4 ${className}`}>
     <label className="block text-sm font-medium mb-1">
       {label} {required && <span className="text-red-500">*</span>}
@@ -23,10 +21,10 @@ const InputWrapper = ({
       </p>
     )}
   </div>
-);
+)
 
 const ContactForm = () => {
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(1)
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -39,109 +37,124 @@ const ContactForm = () => {
     role: '',
     industry: '',
     responseTime: 'within24',
-    bestTimeToReach: ''
-  });
+    bestTimeToReach: '',
+  })
 
-  const [errors, setErrors] = useState({});
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errors, setErrors] = useState({})
+  const [isSubmitted, setIsSubmitted] = useState(false)
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
+    const { name, value } = e.target
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
-    }));
+      [name]: value,
+    }))
     // Clear error when field is modified
     if (errors[name]) {
-      setErrors(prev => ({
+      setErrors((prev) => ({
         ...prev,
-        [name]: ''
-      }));
+        [name]: '',
+      }))
     }
-  };
+  }
 
   const validateStep = (stepNumber) => {
-    const newErrors = {};
+    const newErrors = {}
 
     if (stepNumber === 1) {
-      if (!formData.fullName.trim()) newErrors.fullName = 'Full name is required';
+      if (!formData.fullName.trim())
+        newErrors.fullName = 'Full name is required'
       if (!formData.email.trim()) {
-        newErrors.email = 'Email is required';
+        newErrors.email = 'Email is required'
       } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-        newErrors.email = 'Please enter a valid email';
+        newErrors.email = 'Please enter a valid email'
       }
     }
 
     if (stepNumber === 2) {
-      if (!formData.inquiryType) newErrors.inquiryType = 'Please select an inquiry type';
-      if (!formData.subject.trim()) newErrors.subject = 'Subject is required';
-      if (!formData.message.trim()) newErrors.message = 'Message is required';
+      if (!formData.inquiryType)
+        newErrors.inquiryType = 'Please select an inquiry type'
+      if (!formData.subject.trim()) newErrors.subject = 'Subject is required'
+      if (!formData.message.trim()) newErrors.message = 'Message is required'
     }
 
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+    setErrors(newErrors)
+    return Object.keys(newErrors).length === 0
+  }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     if (validateStep(step)) {
       if (step < 4) {
-        setStep(step + 1);
+        setStep(step + 1)
       } else {
         // Submit form
-        setIsSubmitted(true);
+        setIsSubmitted(true)
         // Here you would typically send the data to your backend
-        console.log('Form submitted:', formData);
+        console.log('Form submitted:', formData)
       }
     }
-  };
+  }
 
   const renderProgressBar = () => (
     <div className="mb-8">
       <div className="flex justify-between mb-2">
-        {['Personal Details', 'Inquiry', 'Company Info', 'Preferences'].map((label, index) => (
-          <div 
-            key={label}
-            className={`flex-1 text-center text-sm ${
-              index + 1 === step ? 'text-cyan font-medium' : 
-              index + 1 < step ? 'text-green-600' : 'text-slate-400'
-            }`}
-          >
-            {label}
-          </div>
-        ))}
+        {['Personal Details', 'Inquiry', 'Company Info', 'Preferences'].map(
+          (label, index) => (
+            <div
+              key={label}
+              className={`flex-1 text-center text-sm ${
+                index + 1 === step
+                  ? 'text-cyan font-medium'
+                  : index + 1 < step
+                  ? 'text-green-600'
+                  : 'text-slate-400'
+              }`}
+            >
+              {label}
+            </div>
+          )
+        )}
       </div>
       <div className="h-2 bg-slate-200 rounded-full">
-        <div 
+        <div
           className="h-full bg-cyan rounded-full transition-all duration-300"
           style={{ width: `${(step / 4) * 100}%` }}
         />
       </div>
     </div>
-  );
+  )
 
   if (isSubmitted) {
     return (
       <div className="w-full p-6 bg-background shadow-2xl">
         <div className="text-center">
           <CheckCircle2 className="w-16 h-16 text-green-500 mx-auto mb-4" />
-          <h2 className="text-2xl font-bold mb-2">Thank You for Contacting Us!</h2>
+          <h2 className="text-2xl font-bold mb-2">
+            Thank You for Contacting Us!
+          </h2>
           <p className="text-slate-600 mb-4">
-            We&apos;ve received your message and will get back to you within 24 hours.
+            We&apos;ve received your message and will get back to you within 24
+            hours.
           </p>
           <p className="text-sm bg-slate-50 p-4 rounded">
-            Your reference number: <span className="font-mono font-medium">BRD-{Date.now().toString(36).toUpperCase()}</span>
+            Your reference number:{' '}
+            <span className="font-mono font-medium">
+              BRD-{Date.now().toString(36).toUpperCase()}
+            </span>
           </p>
         </div>
       </div>
-    );
+    )
   }
 
   return (
     <div className="w-full p-6 bg-background shadow-2xl">
-      <h1 className="text-2xl font-bold mb-6">Contact Broadcom</h1>
+      <h1 className="text-2xl font-bold mb-6">
+        Contact Broadband Communication Networks Ltd
+      </h1>
       {renderProgressBar()}
-      
+
       <form onSubmit={handleSubmit}>
         {step === 1 && (
           <div className="space-y-4">
@@ -194,7 +207,11 @@ const ContactForm = () => {
 
         {step === 2 && (
           <div className="space-y-4">
-            <InputWrapper label="Inquiry Type" required error={errors.inquiryType}>
+            <InputWrapper
+              label="Inquiry Type"
+              required
+              error={errors.inquiryType}
+            >
               <select
                 name="inquiryType"
                 value={formData.inquiryType}
@@ -325,7 +342,9 @@ const ContactForm = () => {
           )}
           <button
             type="submit"
-            className={`ml-auto px-6 py-2 ${step === 4 ? 'bg-indigo' : 'bg-cyan'} text-background hover:bg-indigo focus:ring-2 focus:ring-indigo focus:ring-offset-2 flex items-center`}
+            className={`ml-auto px-6 py-2 ${
+              step === 4 ? 'bg-indigo' : 'bg-cyan'
+            } text-background hover:bg-indigo focus:ring-2 focus:ring-indigo focus:ring-offset-2 flex items-center`}
           >
             {step === 4 ? 'Submit' : 'Next'}
             <ChevronRight className="w-4 h-4 ml-1" />
@@ -333,7 +352,7 @@ const ContactForm = () => {
         </div>
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default ContactForm;
+export default ContactForm

@@ -25,7 +25,7 @@ const Header = () => {
       <Link href="/" className="logo">
         <Image
           src="/images/logo-black.png"
-          alt="Broadcom"
+          alt="Broadband Communication Networks Ltd"
           width={150}
           height={150}
           className="object-contain"
@@ -45,7 +45,7 @@ const Header = () => {
         <div className="w-full flex items-center justify-between md:hidden logo mb-8">
           <Image
             src="/images/logo-black.png"
-            alt="Broadcom"
+            alt="Broadband Communication Networks Ltd"
             width={150}
             height={150}
             className="object-contain"

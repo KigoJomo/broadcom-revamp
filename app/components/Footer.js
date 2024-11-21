@@ -21,7 +21,10 @@ const linkGroups = [
     links: [
       { title: 'Mobile Broadband', href: '/products/mobile-broadband' },
       { title: 'Access Networks', href: '/products/access-networks' },
-      { title: 'Site Facilitation & Control', href: '/products/site-facilitation-control' },
+      {
+        title: 'Site Facilitation & Control',
+        href: '/products/site-facilitation-control',
+      },
       { title: 'Civil Works', href: '/products/civil-works' },
       { title: 'Green Energy', href: '/products/green-energy-solutions' },
     ],
@@ -82,7 +85,7 @@ const Footer = () => {
         <div className="w-full flex flex-col gap-4 md:gap-2 mt-6 md:m-0">
           <Image
             src="/images/logo.png"
-            alt="Broadcom"
+            alt="Broadband Communication Networks Ltd"
             width={200}
             height={200}
             className="object-contain md:ml-auto"

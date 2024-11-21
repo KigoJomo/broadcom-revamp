@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="p-0 bg-background aspect-square md:aspect-[3/1] grid grid-cols-1 grid-rows-1">
       <Image
         src={'/images/contact.webp'}
-        alt="Broadcom"
+        alt="Broadband Communication Networks Ltd"
         width={1000}
         height={1000}
         className="w-full aspect-square md:aspect-[3/1] col-start-1 row-start-1 z-[2]"

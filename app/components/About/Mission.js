@@ -9,34 +9,35 @@ export default function Mission() {
           <h1 className="w-fit mx-auto mb-6 lines-header">our mission</h1>
 
           <p>
-            At Broadcom, our mission is to enable seamless communication and
-            optimize network performance through innovative solutions.
+            At Broadband Communication Networks Ltd, our mission is to enable
+            seamless communication and optimize network performance through
+            innovative solutions.
           </p>
 
-          <p className='hidden md:flex'>
-            We aim to enhance connectivity across diverse sectors, ensuring that our
-            clients — mobile operators, governments, and businesses — have access to
-            the latest technology and tools that enable them to serve their
-            customers more effectively.
+          <p className="hidden md:flex">
+            We aim to enhance connectivity across diverse sectors, ensuring that
+            our clients — mobile operators, governments, and businesses — have
+            access to the latest technology and tools that enable them to serve
+            their customers more effectively.
           </p>
         </div>
 
         <div className="w-full md:w-1/2 border border-cyan shadow-2xl z-[2]">
           <Image
             src="/images/net.webp"
-            alt="Broadcom"
+            alt="Broadband Communication Networks Ltd"
             width={1000}
             height={1000}
             className="w-full aspect-[4/3] object-cover"
           />
         </div>
 
-        <p className='md:hidden'>
-            We aim to enhance connectivity across diverse sectors, ensuring that our
-            clients — mobile operators, governments, and businesses — have access to
-            the latest technology and tools that enable them to serve their
-            customers more effectively.
-          </p>
+        <p className="md:hidden">
+          We aim to enhance connectivity across diverse sectors, ensuring that
+          our clients — mobile operators, governments, and businesses — have
+          access to the latest technology and tools that enable them to serve
+          their customers more effectively.
+        </p>
       </div>
     </section>
   )

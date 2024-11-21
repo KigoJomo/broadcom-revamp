@@ -47,7 +47,7 @@ export default async function ProductPage({ params }) {
       <div className="hero w-full p-0 aspect-[1/1] md:aspect-[23/9] grid grid-cols-1 grid-rows-1">
         <Image
           src={service.image}
-          alt={`Broadcom ${service.title}`}
+          alt={`Broadband Communication Networks Ltd ${service.title}`}
           width={1000}
           height={1000}
           className="w-full h-full col-start-1 row-start-1 m-0 aspect-[1/1] md:aspect-[23/9] object-cover z-[2]"
@@ -55,15 +55,16 @@ export default async function ProductPage({ params }) {
 
         <div className="tint w-full h-full col-start-1 row-start-1 z-[3] bg-gradient-to-t from-[#000000ce] to-[#00000000]"></div>
 
-        <h1 className='h-fit col-start-1 row-start-1 mt-auto px-4 md:px-32 py-2 md:py-4 text-background z-[5]'>{service.title}</h1>
+        <h1 className="h-fit col-start-1 row-start-1 mt-auto px-4 md:px-32 py-2 md:py-4 text-background z-[5]">
+          {service.title}
+        </h1>
       </div>
 
-      <ServiceTabs 
+      <ServiceTabs
         title={service.title}
         description={service.description}
         details={service.details}
       />
-
     </section>
   )
 }
@@ -87,7 +88,7 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    title: `Broadcom | ${service.title}`,
+    title: `Broadband Communication Networks Ltd | ${service.title}`,
     description: service.description,
   }
 }
