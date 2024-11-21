@@ -21,7 +21,7 @@ export default function Mission() {
           </p>
         </div>
 
-        <div className="w-full md:w-1/2 border border-cyan shadow-2xl">
+        <div className="w-full md:w-1/2 border border-cyan shadow-2xl z-[2]">
           <Image
             src="/images/net.webp"
             alt="Broadcom"

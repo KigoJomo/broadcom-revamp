@@ -22,7 +22,6 @@ export default function About() {
       <Collaborations />
       <ChooseUs />
       <ReachOut />
-      {/* TODO: Add branches section */}
     </>
   )
 }

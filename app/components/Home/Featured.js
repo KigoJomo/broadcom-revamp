@@ -3,24 +3,22 @@ import Link from 'next/link'
 import React from 'react'
 import { FaArrowRightLong } from "react-icons/fa6";
 
-
-// TODO: Replace products with items from services.json
 const products = [
   {
-    name: 'fibre-splicer',
-    image: 'splicer',
-    description: 'High precision fibre splicing for all your network needs',
+    name: 'M2M',
+    image: '/images/products/m2m.webp',
+    description: 'We develop customized Machine-to-Machine (M2M) solutions for smart metering, vending, and lift systems.',
   },
   {
-    name: 'Tektronix K15 Protocol analyzer',
-    image: 'protocol-analyzer',
+    name: 'Battery Banks',
+    image: '/images/products/battery-banks.webp',
     description:
-      'Powerful, multi-technology analyzer for all networks.',
+      'We provide regular maintenance of battery banks to ensure optimal performance and longevity.',
   },
   {
-    name: 'R&S®FSH spectrum analyzer',
-    image: 'spectrum-analyzer',
-    description: 'A handheld spectrum analyzer for field applications.',
+    name: 'Generators',
+    image: '/images/products/generators.webp',
+    description: 'Our skilled personnel maintain generators per manufacturer recommendations to ensure optimal performance. \nRoutine checks, cleanings, and system tests are done regularly.',
   },
 ]
 
@@ -29,19 +27,19 @@ const Product = ({ name, image, description, index }) => {
     <Link
       className={`product ${
         index === 0 ? 'bg-indigo' : index === 1 ? 'bg-blue' : 'bg-cyan'
-      } w-full aspect-[3/4] p-6 flex flex-col gap-6 overflow-hidden flex-shrink-0 shadow-2xl hover:-translate-y-4 transition-all duration-300`}
+      } w-full aspect-[3/4] py-6 flex flex-col gap-6 overflow-hidden flex-shrink-0 shadow-2xl hover:-translate-y-4 transition-all duration-300`}
       href={`/products`}
     >
-      <h2 className="text-background">{name}</h2>
-      <p>{description}</p>
+      <h2 className="text-background px-6">{name}</h2>
+      <p className=' px-6'>{description}</p>
       <Image
-        src={`/images/${image}.webp`}
+        src={image}
         alt={name}
         width={500}
         height={500}
-        className="mt-auto ml-auto -mr-6 w-3/5 img-reflect"
+        className="mt-auto w-full img-reflect aspect-[2/1]"
       />
-      <div className="flex items-center justify-between gap-2">
+      <div className=" px-6 flex items-center justify-between gap-2">
         <p>Learn More</p>
         <FaArrowRightLong size={24} className="text-background" />
       </div>
