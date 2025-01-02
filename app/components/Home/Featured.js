@@ -18,7 +18,7 @@ const products = [
   {
     name: 'Generators',
     image: '/images/products/generators.webp',
-    description: 'Our skilled personnel maintain generators per manufacturer recommendations to ensure optimal performance. \nRoutine checks, cleanings, and system tests are done regularly.',
+    description: 'Our skilled personnel maintain generators per manufacturer recommendations to ensure optimal performance.',
   },
 ]
 

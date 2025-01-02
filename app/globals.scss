@@ -18,6 +18,10 @@
   --rose-pink: #e072a4ff;
   --mint-green: #b0e298ff;
 
+  // picks from Rohde & Schwarz
+  --light-blue: #003d7c;
+  --darker-blue: #00356c;
+
   --font-size: 1rem;
   --font-ratio: 1.4;
 }
@@ -134,14 +138,15 @@ img {
     transform: translateY(-50%);
     width: 250vw;
     aspect-ratio: 21/9;
-    opacity: 0.85;
+    opacity: 1;
   }
   &::before {
-    background: var(--blue);
+    background: var(--light-blue);
+    opacity: .8;
     transform: rotateZ(25deg);
   }
   &::after {
-    background: var(--indigo);
+    background: var(--darker-blue);
     transform: rotateZ(-25deg);
   }
 }

@@ -19,6 +19,9 @@ module.exports = {
         'light-gray': 'var(--light-gray)',
         'rose-pink': 'var(--rose-pink)',
         'mint-green': 'var(--mint-green)',
+        // picks from Rohde & Schwarz
+        'light-blue': 'var(--light-blue)',
+        'darker-blue': 'var(--darker-blue)',
       },
     },
   },

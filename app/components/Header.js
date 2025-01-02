@@ -21,10 +21,10 @@ const Header = () => {
   const pathname = usePathname()
 
   return (
-    <header className="w-full h-[10vh] sticky z-10 top-0 flex-shrink-0 px-4 md:px-12 flex items-center justify-between    bg-background shadow-2xl border-b border-purple">
+    <header className="w-full h-[10vh] sticky z-10 top-0 flex-shrink-0 px-4 md:px-12 flex items-center justify-between    bg-light-blue shadow-2xl border-b border-white/20">
       <Link href="/" className="logo">
         <Image
-          src="/images/logo-black.png"
+          src="/images/logo.png"
           alt="Broadband Communication Networks Ltd"
           width={150}
           height={150}
@@ -63,7 +63,7 @@ const Header = () => {
             onClick={() => setOpen(false)}
           >
             <p
-              className={`capitalize md:uppercase text-foreground  ${
+              className={`capitalize md:uppercase md:text-background  ${
                 (page.href === '/' && pathname === '/') ||
                 (page.href !== '/' && pathname.includes(page.href))
                   ? 'text-purple underline underline-offset-4'
@@ -79,6 +79,7 @@ const Header = () => {
 
       <button
         className="menu-button flex md:hidden"
+        style={{ color: "#fff" }}
         onClick={() => setOpen(!open)}
       >
         <RiMenu3Fill size={32} />
