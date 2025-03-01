@@ -5,17 +5,18 @@
 :root {
   --background: #ffffff;
   --foreground: #202020;
-  --gray: #292929;
+  --gray: #292929; /**/
   --purple: #007bff;
   --indigo: #6610f2;
-  --blue: #007bff;
-  --dark-blue: #06305c;
-  --cyan: #17a2b8;
+  --blue: #007bff; /**/
+  --dark-blue: #06305c; /**/
+  --cyan: #17a2b8; /**/
   --light-gray: #f9f9f9ff;
   --rose-pink: #e072a4ff;
   --mint-green: #b0e298ff;
-  --light-blue: #003d7c;
+  --light-blue: #003d7c;/**/
   --darker-blue: #00356c;
+  
   --font-size: 1rem;
   --font-ratio: 1.4;
 }

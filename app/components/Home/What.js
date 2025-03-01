@@ -1,45 +1,47 @@
 import Link from 'next/link'
 import React from 'react'
-import {
-  FaMobileAlt,
-  FaNetworkWired,
-  FaTools,
-  FaBroadcastTower,
-  FaBuilding,
-} from 'react-icons/fa'
+import { 
+  FaProjectDiagram, 
+  FaNetworkWired, 
+  FaWrench, 
+  FaCogs, 
+  FaLeaf, 
+  FaServer 
+} from "react-icons/fa";
 
 const services = [
   {
     name: 'Project Implementation',
-    href: '/products',
-    icon: FaMobileAlt,
+    href: '/products/gsm-sites-roll-out',
+    icon: FaProjectDiagram,
   },
   {
     name: 'Enterprise Network',
-    href: '/products',
+    href: '/products/access-networks',
     icon: FaNetworkWired,
   },
   {
     name: 'Maintenance and Support',
-    href: '/products',
-    icon: FaBroadcastTower,
+    href: '/products/generators',
+    icon: FaWrench,
   },
   {
     name: 'Network Solutions',
-    href: '/products',
-    icon: FaTools,
+    href: '/products/intelligent-transport-networks',
+    icon: FaCogs,
   },
   {
     name: 'Network Green Energy Solutions',
-    href: '/products',
-    icon: FaBuilding,
+    href: '/products/green-energy-solutions',
+    icon: FaLeaf,
   },
   {
     name: 'Data Center Solutions',
-    href: '/products',
-    icon: FaBuilding,
+    href: '/division/enterprise-division',
+    icon: FaServer,
   },
-]
+];
+
 
 const ServiceLink = ({ name, href, icon }) => {
   return (

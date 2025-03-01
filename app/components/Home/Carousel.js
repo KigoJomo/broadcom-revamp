@@ -5,6 +5,7 @@ import React from 'react'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import CustomLink from '../CustomLink';
 
 
 // TODO: Make the carousel full-screen
@@ -13,16 +14,19 @@ const items = [
     image_name: 'broadcom',
     title: 'Broadband Communication Network.',
     desc: "We're a technology solution provider, utilizing advanced technologies to address requirements for Mobile and Fixed Network Operators, ISPs, Communication Regulators and Enterprise ICT solutions and services in Africa.",
+    href: '/about',
   },
   {
     image_name: 'network_solutions',
     title: 'End-to-End Network Solutions',
     desc: 'From Mobile Broadband, Transmission Network, Fiber Optics, Data Centers, Power Systems, Cooling, IT Networks and Quality of Service Solutions, we provide comprehensive Information Communication Technology (ICT) solutions and services to support network operators and enterprises across Africa.',
+    href: '/products/gsm-network-optimization',
   },
   {
     image_name: 'green_energy',
     title: 'Green Energy Solutions',
     desc: 'With our solar, wind, and hybrid energy systems, we offer sustainable energy solutions and services, tailored for Telecom Infrastructure, Data Centers and Enterprise requirements.',
+    href: '/products/green-energy-solutions',
   },
 ]
 
@@ -51,9 +55,10 @@ const Carousel = () => {
                 height={1000}
                 className="w-full md:w-1/2 aspect-[4/3]"
               />
-              <div className="w-full md:w-1/2 flex flex-col items-center gap-6 md:px-8">
-                <h2 className="text-center">{item.title}</h2>
-                <p className="text-center">{item.desc}</p>
+              <div className="w-full md:w-1/2 flex flex-col items-center md:items-start gap-6 md:gap-12 md:px-8">
+                <h2 className="text-center md:text-left">{item.title}</h2>
+                <p className="text-center md:text-left text-sm md:text-base">{item.desc}</p>
+                <CustomLink href={item.href} text={"learn more"} />
               </div>
             </div>
           </div>

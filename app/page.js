@@ -10,12 +10,12 @@ import ContactUs from './components/Home/ContactUs'
 export default function Home() {
   return (
     <>
-      <Landing className={'gap-0 p-6 md:py-24 md:px-24 h-fit md:justify-center'}>
+      <Landing className={'gap-0 p-6 md:p-16 h-fit md:justify-center'}>
         <Carousel />
       </Landing>
       <Who />
       <What />
-      <Featured />
+      {/* <Featured /> */}
       <ChooseUs />
       <ContactUs />
     </>

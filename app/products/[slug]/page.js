@@ -1,43 +1,44 @@
 // app/products/[slug]/page.js
-
-import { promises as fs } from 'fs'
-import Image from 'next/image'
+import { divisions } from '@/lib/divisions'
 import { notFound } from 'next/navigation'
+import Image from 'next/image'
 import ServiceTabs from '@/app/components/Products/ServiceTabs'
 
-// Generate static params for all possible slugs
+// Get all services across all divisions
+const getAllServices = () => divisions.flatMap(division => division.services)
+
+// Find service by slug
+const findServiceBySlug = (slug) => 
+  getAllServices().find(service => service.slug === slug)
+
+// Generate static params
 export async function generateStaticParams() {
-  const file = await fs.readFile(
-    process.cwd() + '/public/data/services.json',
-    'utf-8'
-  )
-  const categories = JSON.parse(file)
-
-  // Flatten all services from all categories into a single array of slugs
-  const slugs = categories.flatMap((category) =>
-    category.services.map((service) => ({
-      slug: service.slug,
-    }))
-  )
-
-  return slugs
+  return getAllServices().map(service => ({
+    slug: service.slug
+  }))
 }
 
-// The main page component
+// Generate metadata
+export async function generateMetadata({ params }) {
+  const slug = (await params).slug
+  const service = findServiceBySlug(slug)
+
+  if (!service) {
+    return { title: 'Product Not Found' }
+  }
+
+  return {
+    title: `Broadband Communication Networks Ltd | ${service.title}`,
+    description: service.description,
+  }
+}
+
+// Main component
 export default async function ProductPage({ params }) {
-  // Read the data
-  const file = await fs.readFile(
-    process.cwd() + '/public/data/services.json',
-    'utf-8'
-  )
-  const categories = JSON.parse(file)
+  
+  const slug = (await params).slug
+  const service = findServiceBySlug(slug)
 
-  // Find the service with matching slug
-  const service = categories
-    .flatMap((category) => category.services)
-    .find((service) => service.slug === params.slug)
-
-  // If service not found, show 404
   if (!service) {
     notFound()
   }
@@ -67,28 +68,4 @@ export default async function ProductPage({ params }) {
       />
     </section>
   )
-}
-
-// Generate metadata for each product page
-export async function generateMetadata({ params }) {
-  const file = await fs.readFile(
-    process.cwd() + '/public/data/services.json',
-    'utf-8'
-  )
-  const categories = JSON.parse(file)
-
-  const service = categories
-    .flatMap((category) => category.services)
-    .find((service) => service.slug === params.slug)
-
-  if (!service) {
-    return {
-      title: 'Product Not Found',
-    }
-  }
-
-  return {
-    title: `Broadband Communication Networks Ltd | ${service.title}`,
-    description: service.description,
-  }
 }
