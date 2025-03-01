@@ -7,10 +7,10 @@ const products = [
   {
     name: 'M2M',
     image: '/images/products/m2m.webp',
-    description: 'We develop customized Machine-to-Machine (M2M) solutions for smart metering, vending, and lift systems.',
+    description: 'We provide customized Machine-to-Machine (M2M) solutions for smart metering, vending, and lift systems.',
   },
   {
-    name: 'Battery Banks',
+    name: 'Backup Systems',
     image: '/images/products/battery-banks.webp',
     description:
       'We provide regular maintenance of battery banks to ensure optimal performance and longevity.',

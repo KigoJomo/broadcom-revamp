@@ -11,18 +11,18 @@ import 'slick-carousel/slick/slick-theme.css'
 const items = [
   {
     image_name: 'broadcom',
-    title: 'Broadband Communication Networks Ltd.',
-    desc: "We're a communication technologies solution provider, utilizing advanced technologies to serve large business organizations in Africa.",
+    title: 'Broadband Communication Network.',
+    desc: "We're a technology solution provider, utilizing advanced technologies to address requirements for Mobile and Fixed Network Operators, ISPs, Communication Regulators and Enterprise ICT solutions and services in Africa.",
   },
   {
     image_name: 'network_solutions',
     title: 'End-to-End Network Solutions',
-    desc: 'From mobile broadband to optic fiber solutions, we provide comprehensive telecommunication infrastructure to keep businesses connected across Africa.',
+    desc: 'From Mobile Broadband, Transmission Network, Fiber Optics, Data Centers, Power Systems, Cooling, IT Networks and Quality of Service Solutions, we provide comprehensive Information Communication Technology (ICT) solutions and services to support network operators and enterprises across Africa.',
   },
   {
     image_name: 'green_energy',
     title: 'Green Energy Solutions',
-    desc: 'With our solar, wind, and hybrid energy systems, we offer sustainable energy solutions tailored for telecom infrastructure and remote sites.',
+    desc: 'With our solar, wind, and hybrid energy systems, we offer sustainable energy solutions and services, tailored for Telecom Infrastructure, Data Centers and Enterprise requirements.',
   },
 ]
 

@@ -10,27 +10,32 @@ import {
 
 const services = [
   {
-    name: 'Mobile Broadband Solutions',
+    name: 'Project Implementation',
     href: '/products',
     icon: FaMobileAlt,
   },
   {
-    name: 'Telecommunication Network Installations',
+    name: 'Enterprise Network',
     href: '/products',
     icon: FaNetworkWired,
   },
   {
-    name: 'Network Management Solutions',
-    href: '/products',
-    icon: FaTools,
-  },
-  {
-    name: 'End-to-End Mobile Network Solutions',
+    name: 'Maintenance and Support',
     href: '/products',
     icon: FaBroadcastTower,
   },
   {
-    name: 'Civil Works and Site Facilitation',
+    name: 'Network Solutions',
+    href: '/products',
+    icon: FaTools,
+  },
+  {
+    name: 'Network Green Energy Solutions',
+    href: '/products',
+    icon: FaBuilding,
+  },
+  {
+    name: 'Data Center Solutions',
     href: '/products',
     icon: FaBuilding,
   },
@@ -47,14 +52,14 @@ const ServiceLink = ({ name, href, icon }) => {
   )
 }
 
-const What = ({heading = 'Our Core Services'}) => {
+const What = ({heading = 'Core Solutions & Services'}) => {
   return (
     <section className="overflow-x-hidden bg-background flex flex-col gap-6">
       <h1 className='w-fit mx-auto lines-header'>{heading}</h1>
       <p className='md:text-center'>
-        At Broadband Communication Networks, we specialize in providing
-        comprehensive telecommunication solutions that drive connectivity and
-        enhance network performance. 
+        We specialize in providing
+        comprehensive  quality Telecommunication and IT Solutions and Services that drive connectivity,
+        enhance network performance and drive enterprise operations efficiency.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:mt-6">

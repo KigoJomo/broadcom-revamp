@@ -19,7 +19,7 @@ const partners = [
   {
     name: 'Rohde & Schwarz',
     image: 'rohde-schwarz',
-    description: `Broadband Communication Networks Ltd teams up with Rohde & Schwarz to provide industry-leading wireless communication and electromagnetic compatibility (EMC) test equipment. This partnership gives Broadband Communication Networks Ltd access to cutting-edge tools like spectrum analyzers, RF power meters, and field strength test solutions, ensuring high-quality wireless communication systems.\n\nWith over 20 years of industry experience, Rohde & Schwarz enhances Broadband Communication Networks Ltd’s ability to deliver reliable, high-performance wireless communication solutions, helping clients meet stringent industry standards.`,
+    description: `Our partnership with Rohde & Schwarz, a german company we shape the future of communication and security. Whether industries, public authorities or governments - the innovative solutions from R&S Test & Measurement, Technology Systems and Network & CyberSecurity Divisions let you meet current and future technology challenges. We provide Quality of Service solutions for all mobile operators & cyber security, security solutions.\n\nWith over 20 years of industry experience, Rohde & Schwarz enhances Broadband Communication Networks Ltd’s ability to deliver reliable, high-performance wireless communication solutions, helping clients meet stringent industry standards.`,
     link: 'https://www.rohde-schwarz.com',
   },
   {
