@@ -10,17 +10,11 @@ import { MdChevronRight } from 'react-icons/md';
 import { IoMdClose } from 'react-icons/io';
 import { divisions } from '@/lib/divisions';
 
-// Generate division links
-const serviceDivisions = divisions.map((division) => ({
-  name: division.name,
-  href: `/division/${division.slug}/`,
-}));
-
 const pages = [
   { name: 'home', href: '/' },
   {
     name: 'solutions & services',
-    submenu: serviceDivisions,
+    submenu: divisions,
   },
   { name: 'partners', href: '/partners' },
   { name: 'about us', href: '/about' },
@@ -29,12 +23,16 @@ const pages = [
 
 const Header = () => {
   const [open, setOpen] = useState(false);
-  const [isSolutionsHovered, setIsSolutionsHovered] = useState(false);
-  const [isSolutionsSubmenuOpen, setIsSolutionsSubmenuOpen] = useState(false);
+  // const [isSolutionsHovered, setIsSolutionsHovered] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
+  const [selectedDivision, setSelectedDivision] = useState(null);
+  const [selectedMobileDivision, setSelectedMobileDivision] = useState(null);
   const pathname = usePathname();
 
-  const isSolutionsActive = serviceDivisions.some((subItem) =>
-    pathname.includes(subItem.href)
+  const isSolutionsActive = divisions.some((division) =>
+    division.services.some((service) =>
+      pathname.includes(`/products/${service.slug}`)
+    )
   );
 
   return (
@@ -53,10 +51,12 @@ const Header = () => {
         className={`absolute top-0 ${
           open ? 'left-0' : '-left-full'
         } transition-all ease-in duration-700 z-10 md:static h-screen md:h-fit w-screen md:w-fit py-6 px-8 md:p-0 flex flex-col md:flex-row md:items-center md:gap-12 bg-background md:bg-transparent shadow-2xl md:shadow-none`}>
+        {/* Mobile overlay */}
         <div
           className="absolute top-0 left-full w-[25vw] h-full md:hidden"
           onClick={() => setOpen(!open)}></div>
 
+        {/* Mobile header */}
         <div className="w-full flex items-center justify-between md:hidden logo mb-8">
           <Image
             src="/images/logo-black.png"
@@ -76,11 +76,16 @@ const Header = () => {
               <div
                 key={index}
                 className="relative group w-full md:w-auto"
-                onMouseEnter={() => setIsSolutionsHovered(true)}
-                onMouseLeave={() => setIsSolutionsHovered(false)}>
+                // onMouseEnter={() => setIsSolutionsHovered(true)}
+                // onMouseLeave={() => {
+                //   setIsSolutionsHovered(false);
+                //   setSelectedDivision(null);
+                // }}
+              >
                 {/* Desktop Dropdown */}
                 <div className="hidden md:block w-full">
                   <button
+                    onClick={() => setIsClicked(!isClicked)}
                     className={`uppercase md:text-background opacity-80 ${
                       isSolutionsActive
                         ? 'text-purple underline underline-offset-4'
@@ -88,25 +93,59 @@ const Header = () => {
                     }`}>
                     {page.name}
                   </button>
-                  {isSolutionsHovered && (
-                    <div className="absolute top-full left-0 shadow-2xl w-[45vw] pt-6">
-                      <div className="bg-background pt-2 pb-6">
-                        {page.submenu.map((subItem, subIndex) => (
-                          <Link
-                            key={subIndex}
-                            href={subItem.href}
-                            className="flex items-center gap-2 px-4 py-2 hover:bg-slate-100"
-                            onClick={() => setOpen(false)}>
-                            <p
-                              className={`${
-                                pathname.includes(subItem.href)
-                                  ? 'text-purple underline underline-offset-4'
-                                  : ''
+                  {isClicked && (
+                    <div className="fixed top-[2.75rem] left-1/2 -translate-x-1/2 shadow-2xl w-[95vw] pt-6">
+                      <div className="bg-background p-6 grid grid-cols-4 gap-8">
+                        <div className="col-span-1 border-r border-gray-200 pr-6">
+                          <h3 className="text-lg font-bold mb-4">Divisions</h3>
+                          {page.submenu.map((division, subIndex) => (
+                            <button
+                              key={subIndex}
+                              onClick={() => setSelectedDivision(division)}
+                              className={`w-full text-left p-3 rounded-lg ${
+                                selectedDivision?.slug === division.slug
+                                  ? 'bg-purple/10 text-purple'
+                                  : 'hover:bg-gray-100'
                               }`}>
-                              {subItem.name}
-                            </p>
-                          </Link>
-                        ))}
+                              {division.name}
+                            </button>
+                          ))}
+                        </div>
+
+                        <div className="col-span-3 pl-6">
+                          {selectedDivision ? (
+                            <>
+                              <h3 className="text-lg font-bold mb-4">
+                                {selectedDivision.name} Services
+                              </h3>
+                              <div className="grid grid-cols-2 gap-4 max-h-[70vh] overflow-y-scroll">
+                                {selectedDivision.services.map(
+                                  (service, serviceIndex) => (
+                                    <Link
+                                      key={serviceIndex}
+                                      href={`/products/${service.slug}`}
+                                      className="p-3 [&>p]:hover:text-purple"
+                                      onClick={() => {
+                                        setOpen(false);
+                                        setIsClicked(false);
+                                      }}>
+                                      <p className="font-medium opacity-100 transition-all duration-300">
+                                        {service.title}
+                                      </p>
+                                      <span className="text-sm text-gray-600 line-clamp-2 opacity-80">
+                                        {service.description}
+                                      </span>
+                                    </Link>
+                                  )
+                                )}
+                              </div>
+                            </>
+                          ) : (
+                            <div className="h-full flex items-center justify-center text-gray-500">
+                              Select a division to view services
+                            </div>
+                          )}
+                        </div>
                       </div>
                     </div>
                   )}
@@ -115,9 +154,7 @@ const Header = () => {
                 {/* Mobile Dropdown */}
                 <div className="md:hidden w-full">
                   <button
-                    onClick={() =>
-                      setIsSolutionsSubmenuOpen(!isSolutionsSubmenuOpen)
-                    }
+                    onClick={() => setSelectedMobileDivision(null)}
                     className="flex items-center justify-between w-full border-b border-black border-opacity-25 py-4 hover:pl-8 transition-all duration-300">
                     <p
                       className={`capitalize ${
@@ -129,32 +166,48 @@ const Header = () => {
                     </p>
                     <MdChevronRight
                       className={`transition-transform ${
-                        isSolutionsSubmenuOpen ? 'rotate-90' : ''
+                        selectedMobileDivision ? 'rotate-90' : ''
                       }`}
                       size={24}
                     />
                   </button>
-                  {isSolutionsSubmenuOpen && (
+
+                  {selectedMobileDivision ? (
                     <div className="pl-4">
-                      {page.submenu.map((subItem, subIndex) => (
-                        <Link
+                      <button
+                        onClick={() => setSelectedMobileDivision(null)}
+                        className="flex items-center w-full py-2 text-purple">
+                        <MdChevronRight className="rotate-180 mr-2" size={16} />
+                        Back to divisions
+                      </button>
+                      {page.submenu
+                        .find((d) => d.slug === selectedMobileDivision)
+                        ?.services.map((service, serviceIndex) => (
+                          <Link
+                            key={serviceIndex}
+                            href={`/products/${service.slug}`}
+                            className="flex items-center justify-between w-full border-b border-black border-opacity-25 py-4 pr-4 hover:pl-8 transition-all duration-300"
+                            onClick={() => {
+                              setOpen(false);
+                              setSelectedMobileDivision(null);
+                            }}>
+                            <p className="text-base">{service.title}</p>
+                            <MdChevronRight size={16} />
+                          </Link>
+                        ))}
+                    </div>
+                  ) : (
+                    <div className="pl-4">
+                      {page.submenu.map((division, subIndex) => (
+                        <button
                           key={subIndex}
-                          href={subItem.href}
-                          className="flex items-center justify-between w-full border-b border-black border-opacity-25 py-4 pr-4 hover:pl-8 transition-all duration-300"
-                          onClick={() => {
-                            setOpen(false);
-                            setIsSolutionsSubmenuOpen(false);
-                          }}>
-                          <p
-                            className={`${
-                              pathname.includes(subItem.href)
-                                ? 'text-purple underline underline-offset-4'
-                                : ''
-                            } text-base`}>
-                            {subItem.name}
-                          </p>
+                          onClick={() =>
+                            setSelectedMobileDivision(division.slug)
+                          }
+                          className="flex items-center justify-between w-full border-b border-black border-opacity-25 py-4 pr-4 hover:pl-8 transition-all duration-300">
+                          <p className="text-base">{division.name}</p>
                           <MdChevronRight size={16} />
-                        </Link>
+                        </button>
                       ))}
                     </div>
                   )}
@@ -186,7 +239,7 @@ const Header = () => {
       <button
         className="menu-button flex md:hidden"
         onClick={() => setOpen(!open)}>
-        <RiMenu3Fill size={32} className='text-background' />
+        <RiMenu3Fill size={32} className="text-background" />
       </button>
     </header>
   );
