@@ -1,19 +1,19 @@
 import Link from 'next/link'
 import React from 'react'
 import { 
+  FaProjectDiagram, 
   FaNetworkWired, 
   FaWrench, 
   FaCogs, 
-  FaServer, 
-  FaSolarPanel
+  FaLeaf, 
+  FaServer 
 } from "react-icons/fa";
-import { GiRadioTower } from "react-icons/gi";
 
 const services = [
   {
     name: 'Project Implementation',
     href: '/products/gsm-sites-roll-out',
-    icon: GiRadioTower,
+    icon: FaProjectDiagram,
   },
   {
     name: 'Enterprise Network',
@@ -33,7 +33,7 @@ const services = [
   {
     name: 'Network Green Energy Solutions',
     href: '/products/green-energy-solutions',
-    icon: FaSolarPanel,
+    icon: FaLeaf,
   },
   {
     name: 'Data Center Solutions',

@@ -9,7 +9,7 @@ const TabButton = ({ label, isActive, onClick }) => (
     className={`px-6 py-3 opacity-100 transition-all
       ${
         isActive
-          ? 'border-b-4 border-purple text-purple'
+          ? 'border-b-4 border-indigo text-purple'
           : 'text-foreground opacity-80'
       }`}
   >
