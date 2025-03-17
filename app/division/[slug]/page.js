@@ -55,6 +55,8 @@ export default async function DivisionPage({ params }) {
           {division.name}
         </h3>
 
+        <p className='text-sm md:text-base md:text-center'>{division.description}</p>
+
         <hr className='border-slate-300' />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

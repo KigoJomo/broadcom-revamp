@@ -12,22 +12,22 @@ import { GiRadioTower } from "react-icons/gi";
 const services = [
   {
     name: 'Project Implementation',
-    href: '/products/gsm-sites-roll-out',
+    href: '/division/solutions-division',
     icon: GiRadioTower,
   },
   {
     name: 'Enterprise Network',
-    href: '/products/access-networks',
+    href: '/division/enterprise-division',
     icon: FaNetworkWired,
   },
   {
     name: 'Maintenance and Support',
-    href: '/products/generators',
+    href: '/division/managed-services-division',
     icon: FaWrench,
   },
   {
     name: 'Network Solutions',
-    href: '/products/intelligent-transport-networks',
+    href: '/division/network-implementation-division',
     icon: FaCogs,
   },
   {
@@ -37,7 +37,7 @@ const services = [
   },
   {
     name: 'Data Center Solutions',
-    href: '/division/enterprise-division',
+    href: '/products/enterprise-network-infrastructure',
     icon: FaServer,
   },
 ];

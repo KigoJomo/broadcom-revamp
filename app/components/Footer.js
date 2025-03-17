@@ -1,3 +1,4 @@
+import { divisions } from '@/lib/divisions';
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -9,32 +10,20 @@ const linkGroups = [
     title: 'Corporate',
     links: [
       { title: 'About Us', href: '/about' },
-      // { title: 'Careers', href: '/careers' },
       { title: 'Partners', href: '/partners' },
       { title: 'Investor Relations', href: '/partners' },
-      // { title: 'News Releases', href: '/news' },
-      // { title: 'Corporate Social Responsibility', href: '/csr' },
     ],
   },
   {
     title: 'Areas of Expertise',
-    links: [
-      { title: 'Mobile Broadband', href: '/products/mobile-broadband' },
-      { title: 'Access Networks', href: '/products/access-networks' },
-      {
-        title: 'Site Facilitation & Control',
-        href: '/products/site-facilitation-control',
-      },
-      { title: 'Civil Works', href: '/products/civil-works' },
-      { title: 'Green Energy', href: '/products/green-energy-solutions' },
-    ],
+    links: divisions.map(division => ({
+      title: division.name,
+      href: `/division/${division.slug}/`,
+    }))
   },
   {
     title: 'Support',
     links: [
-      // { title: 'Customer Service', href: '/support/customer-service' },
-      // { title: 'Technical Assistance', href: '/support/technical-assistance' },
-      // { title: 'Documentation', href: '/support/documentation' },
       { title: 'FAQs', href: '/contact' },
     ],
   },
@@ -110,7 +99,7 @@ const Footer = () => {
 
       <div className="footer-bottom bg-foreground flex flex-col md:flex-row justify-between px-8 md:px-12 py-6">
         <Link href={'/'} className="text-center hover:underline">
-          © 2024 Broadband Communication Networks Ltd.
+          © {new Date().getFullYear()} Broadband Communication Networks Ltd.
         </Link>
       </div>
     </footer>
