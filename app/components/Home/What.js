@@ -12,7 +12,7 @@ import { GiRadioTower } from "react-icons/gi";
 const services = [
   {
     name: 'Project Implementation',
-    href: '/division/solutions-division',
+    href: '/division/network-implementation-division',
     icon: GiRadioTower,
   },
   {
