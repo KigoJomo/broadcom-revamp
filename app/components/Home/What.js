@@ -27,7 +27,7 @@ const services = [
   },
   {
     name: 'Network Solutions',
-    href: '/division/network-implementation-division',
+    href: '/division/solutions-division',
     icon: FaCogs,
   },
   {
